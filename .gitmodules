@@ -1,0 +1,6 @@
+[submodule "submodules/keccak"]
+	path = submodules/keccak
+	url = https://github.com/jrmelsha/keccak.git
+[submodule "submodules/merkle-tree-java"]
+	path = submodules/merkle-tree-java
+	url = https://github.com/SimoneStefani/merkle-tree-java.git

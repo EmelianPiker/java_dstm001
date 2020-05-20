@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for HTML5 for Linux version 5.6.0">
+  <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">
+  Igorski.co</title>
+  <meta http-equiv="Content-Type" content=
+  "text/html; charset=utf-8">
+  <link th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.min.css}"
+  rel="stylesheet" media="screen">
+  <script src="/cjrtnc.leaningtech.com/2.1/loader.js"></script>
+  <script src="/cjrtnc_init.js"></script>
+</head>
+<body>
+  <script>
+    cjCall("MerkleHash", "create", [1,2,3]).then(function (a) { console.log(JSON.stringify(a)); });
+  </script>
+  <div th:replace="fragments/header :: header">
+    This header content is going to be replaced.
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-2" layout:fragment="sidebar">
+        <h1>This is the layout's sidebar</h1>
+        <p>This content will be replaced if the page using the
+        layout also defines a layout:fragment="sidebar"
+        segment.</p>
+      </div>
+      <div class="col" layout:fragment="content">
+        <h1>This is the Layout's main section</h1>
+        <p>This content will be replaced if the page using the
+        layout also defines a layout:fragment="content"
+        segment.</p>
+      </div>
+    </div>
+  </div>
+  <footer th:insert="fragments/footer :: footer" class="footer">
+    This content will remain, but other content will be inserted
+    after it.
+  </footer>
+</body>
+</html>
